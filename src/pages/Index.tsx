@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import HumanoidSection from "@/components/HumanoidSection";
 import SpecsSection from "@/components/SpecsSection";
 import Features from "@/components/Features";
-import MadeByHumans from "@/components/MadeByHumans";
+
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -62,7 +62,6 @@ const Index = () => {
         <HumanoidSection />
         <SpecsSection />
         <Features />
-        <MadeByHumans />
       </main>
       <Footer />
     </div>

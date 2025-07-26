@@ -47,18 +47,13 @@ const Navbar = () => {
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
         <a 
           href="#" 
-          className="flex items-center space-x-2"
+          className="flex items-center"
           onClick={(e) => {
             e.preventDefault();
             scrollToTop();
           }}
           aria-label="HopSafe"
         >
-          <img 
-            src="/logo.svg" 
-            alt="HopSafe Logo" 
-            className="h-7 sm:h-8" 
-          />
           <span className="text-xl font-medium text-gray-900">HopSafe</span>
         </a>
 
