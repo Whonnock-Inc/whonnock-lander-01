@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import LottieAnimation from "./LottieAnimation";
-import heroBusTracking from "@/assets/hero-bus-tracking.png";
+import heroBusMinimal from "@/assets/hero-bus-minimal.png";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -165,9 +165,9 @@ const Hero = () => {
               <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
                 <img 
                   ref={imageRef} 
-                  src={heroBusTracking} 
-                  alt="School bus tracking on map with real-time route" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
+                  src={heroBusMinimal} 
+                  alt="School bus tracking interface" 
+                  className="w-full h-auto max-w-md mx-auto object-cover transition-transform duration-500 ease-out" 
                   style={{ transformStyle: 'preserve-3d' }} 
                 />
                 <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
