@@ -59,6 +59,7 @@ const Navbar = () => {
             alt="HopSafe Logo" 
             className="h-7 sm:h-8" 
           />
+          <span className="text-xl font-medium text-gray-900">HopSafe</span>
         </a>
 
         {/* Desktop Navigation */}
