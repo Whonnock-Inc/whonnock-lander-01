@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import HumanoidSection from "@/components/HumanoidSection";
 import SpecsSection from "@/components/SpecsSection";
 import Features from "@/components/Features";
-import CallToAction from "@/components/CallToAction";
+import AmbientOrbs from "@/components/AmbientOrbs";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -55,14 +55,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <AmbientOrbs />
       <Navbar />
-      <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
+      <main className="space-y-4 sm:space-y-8 relative z-10"> {/* Reduced space on mobile */}
         <Hero />
         <HumanoidSection />
         <SpecsSection />
         <Features />
-        <CallToAction />
       </main>
       <Footer />
     </div>
