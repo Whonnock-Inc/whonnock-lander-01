@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import heroIntegratedBus from "@/assets/hero-integrated-bus.png";
+import heroCleanTracking from "@/assets/hero-clean-tracking.png";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,24 +40,24 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative min-h-screen flex items-center bg-gradient-to-br from-white via-orange-50/30 to-orange-100/40" 
+      className="overflow-hidden relative min-h-screen flex items-center bg-gradient-to-br from-white via-orange-50/20 to-orange-100/30" 
       id="hero" 
       style={{
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      {/* Integrated hero illustration */}
+      {/* Clean hero illustration */}
       <div 
-        className="absolute inset-0 bg-contain bg-no-repeat bg-right opacity-90"
+        className="absolute inset-0 bg-contain bg-no-repeat bg-right-top opacity-80"
         style={{
-          backgroundImage: `url(${heroIntegratedBus})`,
-          backgroundPosition: isMobile ? 'center bottom' : 'right center',
-          backgroundSize: isMobile ? 'contain' : 'auto 85%'
+          backgroundImage: `url(${heroCleanTracking})`,
+          backgroundPosition: isMobile ? 'center 20%' : 'right 15%',
+          backgroundSize: isMobile ? '90% auto' : '60% auto'
         }}
       ></div>
       
-      {/* Content overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent"></div>
+      {/* Subtle content overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/80 to-transparent"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl">
