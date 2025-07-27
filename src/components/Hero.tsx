@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import heroBackgroundFull from "@/assets/hero-background-full.png";
+import heroIntegratedBus from "@/assets/hero-integrated-bus.png";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,16 +40,24 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover min-h-screen flex items-center" 
+      className="overflow-hidden relative min-h-screen flex items-center bg-gradient-to-br from-white via-orange-50/30 to-orange-100/40" 
       id="hero" 
       style={{
-        backgroundImage: `url(${heroBackgroundFull})`,
-        backgroundPosition: 'center center', 
-        backgroundSize: 'cover',
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent"></div>
+      {/* Integrated hero illustration */}
+      <div 
+        className="absolute inset-0 bg-contain bg-no-repeat bg-right opacity-90"
+        style={{
+          backgroundImage: `url(${heroIntegratedBus})`,
+          backgroundPosition: isMobile ? 'center bottom' : 'right center',
+          backgroundSize: isMobile ? 'contain' : 'auto 85%'
+        }}
+      ></div>
+      
+      {/* Content overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl">
