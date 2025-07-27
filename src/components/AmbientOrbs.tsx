@@ -11,7 +11,7 @@ const AmbientOrbs = () => {
   const orbs = [
     {
       size: 'w-32 h-32',
-      color: 'bg-gradient-to-br from-orange-200/30 to-orange-300/20',
+      color: 'bg-gradient-to-br from-orange-200/50 to-orange-300/30',
       blur: 'blur-xl',
       initialX: 15,
       initialY: 20,
@@ -20,7 +20,7 @@ const AmbientOrbs = () => {
     },
     {
       size: 'w-48 h-48',
-      color: 'bg-gradient-to-br from-yellow-200/25 to-yellow-300/15',
+      color: 'bg-gradient-to-br from-yellow-200/40 to-yellow-300/25',
       blur: 'blur-2xl',
       initialX: 70,
       initialY: 15,
@@ -29,7 +29,7 @@ const AmbientOrbs = () => {
     },
     {
       size: 'w-24 h-24',
-      color: 'bg-gradient-to-br from-orange-100/40 to-peach-200/30',
+      color: 'bg-gradient-to-br from-orange-100/60 to-orange-200/40',
       blur: 'blur-lg',
       initialX: 85,
       initialY: 45,
@@ -38,7 +38,7 @@ const AmbientOrbs = () => {
     },
     {
       size: 'w-40 h-40',
-      color: 'bg-gradient-to-br from-white/20 to-orange-100/25',
+      color: 'bg-gradient-to-br from-white/30 to-orange-100/35',
       blur: 'blur-xl',
       initialX: 10,
       initialY: 70,
@@ -47,7 +47,7 @@ const AmbientOrbs = () => {
     },
     {
       size: 'w-36 h-36',
-      color: 'bg-gradient-to-br from-yellow-100/30 to-orange-200/20',
+      color: 'bg-gradient-to-br from-yellow-100/45 to-orange-200/30',
       blur: 'blur-xl',
       initialX: 50,
       initialY: 85,
@@ -56,7 +56,7 @@ const AmbientOrbs = () => {
     },
     {
       size: 'w-28 h-28',
-      color: 'bg-gradient-to-br from-peach-100/35 to-orange-200/25',
+      color: 'bg-gradient-to-br from-orange-50/50 to-orange-200/35',
       blur: 'blur-lg',
       initialX: 25,
       initialY: 50,
@@ -66,6 +66,7 @@ const AmbientOrbs = () => {
   ];
 
   useEffect(() => {
+    console.log('AmbientOrbs mounting...');
     setIsMounted(true);
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -127,6 +128,7 @@ const AmbientOrbs = () => {
     };
 
     if (isMounted) {
+      console.log('Starting animation...');
       animate();
       
       // Add event listeners
@@ -165,9 +167,12 @@ const AmbientOrbs = () => {
         />
       ))}
       
+      {/* Test orb for debugging */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-orange-300 rounded-full opacity-80 z-50" />
+      
       {/* Additional overlay orbs for depth */}
-      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-orange-100/10 to-yellow-100/15 rounded-full blur-3xl opacity-50 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-gradient-to-br from-white/8 to-orange-50/12 rounded-full blur-3xl opacity-40 animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-orange-100/20 to-yellow-100/25 rounded-full blur-3xl opacity-60 animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-gradient-to-br from-white/15 to-orange-50/20 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
   );
 };
