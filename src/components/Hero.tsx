@@ -46,18 +46,19 @@ const Hero = () => {
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      {/* Clean hero illustration */}
+      {/* Seamless integrated hero illustration */}
       <div 
-        className="absolute inset-0 bg-contain bg-no-repeat bg-right-top opacity-80"
+        className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroCleanTracking})`,
-          backgroundPosition: isMobile ? 'center 20%' : 'right 15%',
-          backgroundSize: isMobile ? '90% auto' : '60% auto'
+          backgroundPosition: isMobile ? 'center center' : 'right center',
+          backgroundSize: isMobile ? 'cover' : '100% auto',
+          opacity: isMobile ? 0.7 : 0.85
         }}
       ></div>
       
-      {/* Subtle content overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/80 to-transparent"></div>
+      {/* Natural text readability blend */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/60 to-transparent"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl">
